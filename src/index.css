@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-heading-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  
+  .font-sans-ui {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  .font-space-tech {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+  }
+
+  .font-mono-code {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Base style resets and scrollbars */
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(245, 158, 11, 0.3);
+  color: #fff;
+}
+
+/* Custom scrollbar matching dark lux theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0c;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Gold background grid representing tech blueprint */
+.grid-bg-overlay {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+/* Shimmer animation for golden border elements */
+@keyframes gold-shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gold-shimmer-border {
+  background-size: 200% 200%;
+  animation: gold-shimmer 6s ease infinite;
+}
+
